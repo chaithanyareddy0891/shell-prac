@@ -24,4 +24,5 @@ else
     else
         echo "package failed please check"
         exit 1
+    fi
 fi
