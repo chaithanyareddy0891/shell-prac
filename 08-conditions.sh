@@ -10,4 +10,18 @@ else
     exit 1
 fi
 
-dnf install nginx -y
+dnf list installed tree
+
+if [ $? -eq 0 ]
+then
+    echo "package is allready installed"
+else
+    echo "installing package tree .."
+    dnf install tree -y
+    if [ $? -eq 0 ]
+    then
+        echo "tree package is successfully installed"
+    else
+        echo "package failed please check"
+        exit 1
+fi
