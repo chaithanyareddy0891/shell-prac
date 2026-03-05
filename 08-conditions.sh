@@ -7,6 +7,7 @@ then
     echo "run below script with root previlizes"
 else
     echo "run script with root previlizes"
+    exit 1
 fi
 
 dnf install nginx -y
